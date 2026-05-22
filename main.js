@@ -1,8 +1,11 @@
 import "./styles.css";
+import castImage from "./assets/han-cast.png";
+import correctFeedbackGif from "./assets/feedback-correct.gif";
+import wrongFeedbackGif from "./assets/feedback-wrong.gif";
 
 const FEEDBACK_MEDIA = {
-  correct: "./assets/feedback-correct.gif",
-  wrong: "./assets/feedback-wrong.gif"
+  correct: correctFeedbackGif,
+  wrong: wrongFeedbackGif
 };
 
 const QUESTIONS = [
@@ -605,7 +608,7 @@ function renderGameScreen() {
           </div>
 
           <figure class="cast-stage">
-            <img src="./assets/han-cast.png" alt="西汉 Q 版人物组图" />
+            <img src="${castImage}" alt="西汉 Q 版人物组图" />
             <figcaption>
               <span>Q版人物阵容</span>
               <strong>低龄友好的历史冒险队</strong>
