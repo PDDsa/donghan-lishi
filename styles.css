@@ -557,6 +557,19 @@ p {
   border: 1px solid rgba(255, 220, 158, 0.16);
 }
 
+.world-note-button {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.world-note-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(169, 241, 255, 0.38);
+  background: rgba(169, 241, 255, 0.08);
+}
+
 .world-note strong {
   color: var(--sky);
   display: block;
@@ -567,6 +580,71 @@ p {
 .world-note p {
   color: var(--ink-soft);
   line-height: 1.72;
+}
+
+.world-note-hint {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.world-backdrop {
+  z-index: 38;
+}
+
+.world-modal {
+  width: min(720px, calc(100vw - 36px));
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 231, 183, 0.28);
+  background: linear-gradient(180deg, rgba(68, 24, 17, 0.96), rgba(51, 18, 15, 0.95));
+  box-shadow: 0 30px 90px rgba(16, 6, 5, 0.44);
+}
+
+.world-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.world-modal h3 {
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
+}
+
+.world-modal-summary {
+  color: var(--sky);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+.world-modal-body {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 244, 223, 0.08);
+  border: 1px solid rgba(255, 220, 158, 0.16);
+}
+
+.world-modal-body p {
+  color: var(--ink-soft);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.world-close {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 220, 158, 0.2);
+  background: rgba(255, 248, 233, 0.08);
+  color: var(--ink-strong);
+  font-size: 22px;
+  cursor: pointer;
 }
 
 .graph-board {
@@ -744,6 +822,10 @@ p {
     max-width: 420px;
     justify-self: center;
   }
+
+  .world-modal {
+    width: min(680px, calc(100vw - 28px));
+  }
 }
 
 @media (max-width: 860px) {
@@ -778,6 +860,15 @@ p {
 
   .feedback-modal-body,
   .modal-review-copy {
+    font-size: 16px;
+  }
+
+  .world-modal h3 {
+    font-size: 26px;
+  }
+
+  .world-modal-summary,
+  .world-modal-body p {
     font-size: 16px;
   }
 }
