@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "western-han-kids-h5",
+  "name": "donghan-lishi",
   "compatibility_date": "2026-05-22",
   "assets": {
     "directory": "./dist",
